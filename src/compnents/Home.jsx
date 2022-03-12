@@ -12,7 +12,7 @@ setShow(res.data)
 setSongs(res.data)
 })
 },[])
-
+// on selcting filter
 function handleChange(event) {
     let value =event.target.value
     if(value === "all"){
