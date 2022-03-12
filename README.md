@@ -3,6 +3,7 @@
 - Responsive
 - Filtes
 - Play Music
+- Auto stop of Previous music when next music is played
 
 ## Run Locally
 
