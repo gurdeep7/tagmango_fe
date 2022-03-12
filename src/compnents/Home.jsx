@@ -7,7 +7,7 @@ const [show,setShow] = useState([])
 
 useEffect(()=>{
 axios.get("https://s3-ap-southeast-1.amazonaws.com/he-public-data/studiod9c0baf.json")
-.then(res => {
+.then(res => { 
 setShow(res.data)
 setSongs(res.data)
 })
@@ -19,9 +19,11 @@ function handleChange(event) {
         setShow(songs)
     }else{
        var arr = songs.filter((e)=>{
-        let artist = e.artists.split(", ")
+        let artist = e.artists.split(",")
         for(let i = 0; i < artist.length; i++){
-            if(artist[i] === value){
+          
+            if(artist[i].trim() === value){
+                
                 return true
             }
         }
@@ -42,11 +44,15 @@ function handleChange(event) {
     return(
         <div className="flex">
             <select onChange={handleChange} className="absolute right-0 border-2 border-blue-400">
-                <option value="all" >Filter By Artist</option>
-                <option value="Atif Aslam">Atif Aslam</option>
-                <option value="Amjad Sabri">Amjad Sabri</option>
+                <option value="all">Filter By Artist</option>
+                <option>Atif Aslam</option>
+                <option>Amjad Sabri</option>
                 <option>Rahat Fateh Ali Khan</option>
                 <option>Saieen Zahoor</option>
+                <option>Noori</option>
+                <option>Gul Panrra</option>
+                <option>Sara Haider</option>
+                <option>Harshadeep Kaur</option>
             </select>
         <div className="mt-5 grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
 
