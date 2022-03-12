@@ -5,6 +5,10 @@
 - Play Music
 - Auto stop of Previous music when next music is played
 
+## Deployed Link
+
+https://tender-wright-80b63e.netlify.app/
+
 ## Run Locally
 
 Clone the project
