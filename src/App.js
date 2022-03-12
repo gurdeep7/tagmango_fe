@@ -1,13 +1,16 @@
-import './App.css';
+import { Footer } from './compnents/Footer';
 import { Home } from './compnents/Home';
+import { Navbar } from './compnents/Navbar';
 
 function App() {
   return (
     <>
-    <div className='h-44 bg-red-400 w-full'>
-<div className='text-8xl text-green-300 pt-12 hover:text-gray-400 animate-bounce w-fit m-auto text-center'>Music Lovers</div>
-    </div>
+    {/* importing navbar */}
+    <Navbar />
+    {/* importing home page */}
     <Home/>
+    {/* importing footer */}
+    <Footer />
     </>
   );
 }
